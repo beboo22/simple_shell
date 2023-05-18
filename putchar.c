@@ -2,7 +2,7 @@
 /**
 * _putchar - prints a single character
 * @c: character
-* Return: 1 
+* Return: 1
 */
 int _putchar(char c)
 {

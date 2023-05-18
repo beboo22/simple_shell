@@ -16,4 +16,12 @@ char *_strdup(char *s);
 
 void print_number(int n);
 int _atoi(char *s);
+
+extern int exnum;
+extern int errnum;
+
+void cmderror(char *n, char *command);
+void accesserr(char *n, char *command);
+void exiterr(char *n, char *inp);
+void execerr(char *n, char *command);
 #endif
