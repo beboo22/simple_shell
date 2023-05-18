@@ -13,4 +13,7 @@ int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
 int _putchar(char c);
 char *_strdup(char *s);
+
+void print_number(int n);
+int _atoi(char *s);
 #endif
