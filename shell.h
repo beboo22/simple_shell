@@ -20,6 +20,7 @@ int _atoi(char *s);
 extern int exnum;
 extern int errnum;
 
+void exe(char **argv);
 void cmderror(char *n, char *command);
 void accesserr(char *n, char *command);
 void exiterr(char *n, char *inp);
