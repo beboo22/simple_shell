@@ -36,7 +36,7 @@ int exitch(char *inp, char *n)
 			}
 			else
 			{
-				exit_error(n, inp);
+				exiterr(n, inp);
 				free(num);
 				exnum = 2;
 				return (-1);

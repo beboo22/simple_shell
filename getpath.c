@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * getpath - n of dirs
- * @path: PATH 
+ * @path: PATH
  * Return: n of dirs
  */
 int getpath(char *path)

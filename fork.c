@@ -26,9 +26,9 @@ void fork_then_wait_then_exec(char **commands, char **arr_path, char **env,
 		exec_check = execve(commands[0], commands, env);
 		if (exec_check < 0)
 		{
-			exec_error(n, commands[0]);
-			free_array(arr_path);
-			free_array(commands);
+			execerr(n, commands[0]);
+			free_arr(arr_path);
+			free_arr(commands);
 			free(inp);
 			exnum = 126;
 			_exit(126);

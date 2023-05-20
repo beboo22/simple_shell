@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * print_env - print env var
+ * pr_env - print env var
  * @env: array of env var
  */
 void pr_env(char **env)

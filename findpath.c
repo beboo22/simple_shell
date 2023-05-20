@@ -18,7 +18,7 @@ char *fpath(char **arrpath, char *command)
 		path = malloc(sizeof(char) * (total_length + 2));
 		if (path == NULL)
 		{
-			free_array(arrpath);
+			free_arr(arrpath);
 			return (NULL);
 		}
 		b = 0;
