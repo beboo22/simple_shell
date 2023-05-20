@@ -1,14 +1,13 @@
 #include "shell.h"
 /**
- * fork_wait_exec - executes commands by first forking a child process
- * then executing in that child while the parent process waits
+ * fork_wait_exec - fork and wait and excute
  * @commands: commands
  * @arr_path: directories in PATH
  * @env: env var
  * @n: name of program
  * @inp: input
  */
-void fork_wait_exec(char **commands, char **arr_path, char **env,
+void forkthenwaitthenexec(char **commands, char **arr_path, char **env,
 		    char *n, char *inp)
 {
 	pid_t pid;
