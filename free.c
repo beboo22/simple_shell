@@ -1,4 +1,4 @@
-#nclude "shell.h"
+#include "shell.h"
 /**
  *  * free_arr - free array
  *   * @array: array
