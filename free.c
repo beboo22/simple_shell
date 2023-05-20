@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * free_arr - free array
- *   * @array: array
+ * @array: array
  *    */
 void free_arr(char **array)
 {
