@@ -34,5 +34,5 @@ int blankch(char *inp);
 int pathch(char *command);
 int envch(char *inp);
 
-char *get_location(char *command)
+char *fpath(char **arrpath, char *command);
 #endif
