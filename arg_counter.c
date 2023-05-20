@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *  * arg_counter - count the number of arguments
+ * arg_counter - count the number of arguments
  *   * @user_input: string of user input
  *    * Return: number of arguments
  *     */
