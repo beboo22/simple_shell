@@ -8,7 +8,7 @@ void cmderror(char *n, char *command)
 {
 	write(STDERR_FILENO, n, _strlen(n));
 	write(STDERR_FILENO, ": ", 2);
-	print_number(errnum);
+	printnum(errnum);
 	write(STDERR_FILENO, ": ", 2);
 	write(STDERR_FILENO, command, _strlen(command));
 	write(STDERR_FILENO, ": not found\n", 13);
@@ -52,7 +52,7 @@ void exiterr(char *n, char *inp)
 
 	write(STDERR_FILENO, n, _strlen(n));
 	write(STDERR_FILENO, ": ", 2);
-	print_number(errnum);
+	printnum(errnum);
 	write(STDERR_FILENO, ": exit: Illegal number: ", 24);
 	write(STDERR_FILENO, z, _strlen(z));
 	write(STDERR_FILENO, "\n", 1);

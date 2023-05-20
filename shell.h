@@ -14,7 +14,7 @@ int _strcmp(char *s1, char *s2);
 int _putchar(char c);
 char *_strdup(char *s);
 
-void print_number(int n);
+void printnum(int n);
 int _atoi(char *s);
 
 extern int exnum;
@@ -38,4 +38,9 @@ int getpath(char *path);
 char **arrpath(char **env);
 char *fpath(char **arrpath, char *command);
 void pr_env(char **env);
+
+char **parse(char *inp, char **arrpath, char *n);
+
+void free_arr(char **array);
+int arg_counter(char *inp);
 #endif

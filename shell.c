@@ -40,7 +40,7 @@ int main(__attribute__((unused)) int argc, char **argv, char **env)
 			continue;
 		}
 		arr_path = arrpath(env);
-		commands = parse_input(inp, arr_path, n);
+		commands = parse(inp, arr_path, n);
 		if (commands != NULL)
 		{
 			fork_then_wait_then_exec(commands, arr_path, env, n, inp);
