@@ -7,7 +7,7 @@
  * @n: name of program
  * @inp: input
  */
-void forkthenwaitthenexec(char **commands, char **arr_path, char **env,
+void fork_then_wait_then_exec(char **commands, char **arr_path, char **env,
 		    char *n, char *inp)
 {
 	pid_t pid;
