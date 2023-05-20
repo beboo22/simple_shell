@@ -2,7 +2,7 @@
 /**
  * free_arr - free array
  * @array: array
- *    */
+ */
 void free_arr(char **array)
 {
 	 size_t i;
