@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
- *  * arg_counter - count the number of args
- *   * @inp: input
- *    * Return: number of args
- *     */
+ * arg_counter - count the number of args
+ * @inp: input
+ * Return: number of args
+ */ 
 int arg_counter(char *inp)
 {
 	int i, args, k;
