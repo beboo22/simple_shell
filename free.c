@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- *  * free_arr - free array
+ * free_arr - free array
  *   * @array: array
  *    */
 void free_arr(char **array)
