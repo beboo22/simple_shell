@@ -26,7 +26,7 @@ void accesserr(char *n, char *command);
 void exiterr(char *n, char *inp);
 void execerr(char *n, char *command);
 
-void fork_then_wait_then_exec(char **commands, char **arr_path, char **env,
+void fork_wait_exec(char **commands, char **arr_path, char **env,
 		    char *n, char *inp);
 
 int exitch(char *inp, char *n);
