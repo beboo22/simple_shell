@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <signal.h>
+#include <sys/stat.h>
 
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
@@ -21,6 +22,7 @@ extern int exnum;
 extern int errnum;
 
 void exe(char **argv);
+char *get_location(char *command);
 void cmderror(char *n, char *command);
 void accesserr(char *n, char *command);
 void exiterr(char *n, char *inp);
