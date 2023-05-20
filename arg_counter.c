@@ -1,4 +1,4 @@
-nclude "shell.h"
+include "shell.h"
 /**
  *  * arg_counter - count the number of arguments
  *   * @user_input: string of user input
