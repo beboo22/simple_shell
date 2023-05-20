@@ -8,7 +8,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <signal.h>
-#include <sys/stat.h>
 
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
@@ -22,12 +21,21 @@ extern int exnum;
 extern int errnum;
 
 void exe(char **argv);
-char *get_location(char *command);
 void cmderror(char *n, char *command);
 void accesserr(char *n, char *command);
 void exiterr(char *n, char *inp);
 void execerr(char *n, char *command);
 
-void fork_wait_exec(char **commands, char **arr_path, char **env,
+void fork_then_wait_then_exec(char **commands, char **arr_path, char **env,
 		    char *n, char *inp);
+
+int exitch(char *inp, char *n);
+int blankch(char *inp);
+int pathch(char *command);
+int envch(char *inp);
+
+int getpath(char *path);
+char **arrpath(char **env);
+char *fpath(char **arrpath, char *command);
+void pr_env(char **env);
 #endif
