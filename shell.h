@@ -34,5 +34,8 @@ int blankch(char *inp);
 int pathch(char *command);
 int envch(char *inp);
 
+int getpath(char *path);
+char **arrpath(char **env);
 char *fpath(char **arrpath, char *command);
+void pr_env(char **env);
 #endif
