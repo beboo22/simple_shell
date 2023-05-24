@@ -1,42 +1,26 @@
 #include "shell.h"
 /**
- * fork_wait_exec - fork and wait and excute
- * @commands: commands
- * @arr_path: directories in PATH
- * @env: env var
- * @n: name of program
- * @inp: input
- */
-void fork_then_wait_then_exec(char **commands, char **arr_path, char **env,
-		    char *n, char *inp)
+* _fork - fork
+* @argv: array of args
+* Return: return
+**/
+int _fork(char **argv)
 {
-	pid_t pid;
-	int st, exec_check;
+	pid_t _pi, ch;
+	int st;
 
-	st = 0;
-	pid = fork();
-	if (pid == -1)
-	{
-		perror(n);
-		exnum = 1;
-		_exit(1);
-	}
-	else if (pid == 0)
-	{
-		exec_check = execve(commands[0], commands, env);
-		if (exec_check < 0)
-		{
-			execerr(n, commands[0]);
-			free_arr(arr_path);
-			free_arr(commands);
-			free(inp);
-			exnum = 126;
-			_exit(126);
-		}
-		exnum = 0;
-		_exit(0);
+	ch = fork();
+	if (ch == -1)
+		perror("hsh");
 
+	if (ch == 0)
+	{
+		_pi = execve(argv[0], argv, environ);
+		if (_pi == -1)
+			exit(1);
 	}
-	exnum = 0;
-	wait(&st);
+	else
+		wait(&st);
+
+	return (WEXITSTATUS(st));
 }

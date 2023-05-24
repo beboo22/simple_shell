@@ -1,9 +1,9 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-#include <unistd.h>
+extern char **environ;
+
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -13,46 +13,41 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/wait.h>
-#include <signal.h>
 #include <stddef.h>
 #include <wait.h>
 #include <stddef.h>
 #include <errno.h>
 #include <dirent.h>
 
-int _strlen(char *s);
-int _strcmp(char *s1, char *s2);
-int _putchar(char c);
-char *_strdup(char *s);
+/**
+ * struct fs - the shell builtins
+ * @t: name of builtins
+ * @o: what the builtins do (or function)
+ **/
+typedef struct fs
+{
+	char *t;
+	int (*o)(char **p);
 
+} bue;
+int _env(char **av);
+int _cd(char **av);
+int fexit(char **av);
+char **_split(const char *st, const char d);
+void free_arr(char **tow);
+char *_genv(const char *n);
+char *f_path(char **exe);
+int _fpath(char *path);
+void execute(char *l);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+int _strcmp(char *s1, char *s2);
+int _strlen(char *s);
+char *_strdup(char *s);
+void free_arr(char **array);
+int _putchar(char c);
 void printnum(int n);
 int _atoi(char *s);
-
-extern int exnum;
-extern int errnum;
-
-void exe(char **argv);
-void cmderror(char *n, char *command);
-void accesserr(char *n, char *command);
-void exiterr(char *n, char *inp);
-void execerr(char *n, char *command);
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-
-void fork_then_wait_then_exec(char **commands, char **arr_path, char **env,
-		    char *n, char *inp);
-
-int exitch(char *inp, char *n);
-int blankch(char *inp);
-int pathch(char *command);
-int envch(char *inp);
-
-int getpath(char *path);
-char **arrpath(char **env);
-char *fpath(char **arrpath, char *command);
-void pr_env(char **env);
-
-char **parse(char *inp, char **arrpath, char *n);
-
-void free_arr(char **array);
-int arg_counter(char *inp);
+int _fork(char **argv);
+int _exec(char **argv);
+void _error(char *n, char *err);
 #endif

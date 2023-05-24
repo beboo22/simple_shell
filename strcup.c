@@ -4,7 +4,6 @@
  * @s: string
  * Return: pointer to new allocated space
  */
-
 char *_strdup(char *s)
 {
 	int l, i;
